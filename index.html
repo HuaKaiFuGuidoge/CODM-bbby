@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巴巴博一</title>
+    <link rel="stylesheet" href="max.css">
+</head>
+<body>
+    <div class="container">
+        <div class="canvas-container">
+            <canvas id="myCanvas" width="512" height="512"></canvas>
+        </div>
+        <div class="toolbar">
+            <button id="saveBtn">保存</button>
+            <button id="resetBtn">重置</button>
+            <button id="changeBtn">更改</button>
+            <button id="advancedBtn">高级</button>
+        </div>
+    </div>
+    <div id="fileViewer" class="file-viewer">
+        <div id="imageSelector" class="image-selector"></div>
+    </div>
+    <div id="advancedPanel" class="advanced-panel">
+        <div class="input-row">
+            <label for="xOffset">X 偏移量:</label>
+            <input type="number" id="xOffset" min="-100" max="100" value="0">
+        </div>
+    
+        <div class="input-row">
+            <label for="yOffset">Y 偏移量:</label>
+            <input type="number" id="yOffset" min="-100" max="100" value="75">
+        </div>
+    
+        <div class="input-row">
+            <label for="rotation">旋转角度:</label>
+            <input type="number" id="rotation" min="0" max="360" value="20">
+        </div>
+    
+        <div class="input-row">
+            <label for="scale">缩放:</label>
+            <input type="number" id="scale" min="0.1" step="0.1" value="1" style="width: 80px;">
+        </div>
+    
+        <div class="input-row">
+            <label for="hFlip" class="checkbox-label">水平翻转:</label>
+            <input type="checkbox" id="hFlip">
+        </div>
+    
+        <div class="input-row">
+            <label for="vFlip" class="checkbox-label">垂直翻转:</label>
+            <input type="checkbox" id="vFlip">
+        </div>
+    
+        <div class="input-row">
+            <label for="uploadImage">自定义枪:</label>
+            <input type="file" id="uploadImage" accept="image/*">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
